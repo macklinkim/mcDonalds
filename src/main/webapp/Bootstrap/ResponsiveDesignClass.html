@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>반응형 디자인(Responsive Design)</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+    <style>
+        [class*="span"] {
+            background-color:gray;
+            text-align:center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+   
+    
+     <div class="container">
+     <div class="row">
+      <div class="span4">
+       <div class="visible-phone">
+        휴대폰 환경에서 보여짐 <br/>
+        visible-phone
+       </div>     
+      </div>
+      <div class="span4">
+       <div class="visible-tablet">
+       태블릿 환경에서 보여짐  <br/>
+       visible-tablet
+       </div>
+      </div>
+      <div class="span4">
+       <div class="visible-desktop">
+       데스크톱 환경에서 보여짐 <br/>    
+       visible-desktop
+       </div>   
+      </div>
+     </div>
+    </div>
+    
+    
+    <div class="container">
+     <div class="row">
+      <div class="span4">
+       <div class="hidden-phone">
+        휴대폰 환경에서 숨김 <br/>
+       hidden-phone
+       </div>     
+      </div>
+      <div class="span4">
+       <div class="hidden-tablet">
+       태블릿 환경에서 숨김  <br/>
+       hidden-tablet
+       </div>
+      </div>
+      <div class="span4">
+       <div class="hidden-desktop">
+       데스크톱 환경에서 숨김 <br/>    
+       hidden-desktop
+       </div>   
+      </div>
+     </div>
+    </div>
+</body>
+</html>

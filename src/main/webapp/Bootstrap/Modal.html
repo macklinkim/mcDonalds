@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>모달 창</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+    <script src="./Scripts/jquery-1.11.1.js"></script>
+    <script src="./Scripts/bootstrap.js"></script>
+        <script>
+        $(function () {
+            $('#btnOpenDialog').click(function () {
+                $('#theModal').modal(); // 모달 창 열기
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span10">
+
+<!--                <div class="modal">
+                    <div class="modal-header">
+                        <a href="#" class="close">&times;</a>
+                        <h3>모달 헤더</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>본문 영역...</p>
+                        <p>본문 영역...</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">닫기</button>
+                    </div>
+                </div>-->
+
+                
+                <div class="modal hide fade" id="theModal">
+                    <div class="modal-header">
+                        <a href="#" class="close" data-dismiss="modal">&times;</a>
+                        <h3>모달 헤더</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>본문 영역...</p>
+                        <p>본문 영역...</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-primary" data-dismiss="modal">닫기</a>
+                    </div>
+                </div>
+
+                <a href="#theModal" class="btn" data-toggle="modal">모달 창 열기</a>
+
+                <input type="button" name="btnOpen" value="열기" 
+                    data-toggle="modal" data-target="#theModal" />
+
+                <button id="btnOpenDialog">열기</button>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

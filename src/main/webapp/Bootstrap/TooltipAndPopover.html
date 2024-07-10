@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>툴팁과 팝오버</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+    <script src="./Scripts/jquery-2.0.2.js"></script>
+    <script src="./Scripts/bootstrap.js"></script>
+     <script>
+        $(function () {
+            $('#theTooltip').tooltip(); // 툴팁 적용
+            $("a[rel='tooltip']").tooltip({ placement: "right" });
+
+            $("#thePopover").popover({html:true}); // 팝오버 적용
+            $("a[rel='popover']").popover({ placement: "right" })
+                                 .click(function (e) { e.preventDefault(); });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.</p>
+
+                <a href="#" title="툴팁: 풍선 도움말">툴팁</a>
+
+                <a href="#" 
+                    title="툴팁: 풍선 도움말" 
+                    id="theTooltip"
+                    data-toggle="tooltip"
+                    data-placement="right"
+                    data-animation="false"
+                    data-title="제목"
+                    >툴팁</a>
+
+                <a href="#" title="툴팁: 풍선 도움말" rel="tooltip">툴팁1</a>
+                <a href="#" title="툴팁: 풍선 도움말" rel="tooltip">툴팁2</a>
+
+                <hr />
+
+                <a href="#" id="thePopover" data-toggle="popover"
+                    title="제목 부분" data-content="내용<hr />부분..."
+                    >팝오버</a>
+
+                <a href="#" title="팝오버" rel="popover" data-content="내용1">팝오버1</a>
+                <a href="#" title="팝오버" rel="popover" data-content="내용2">팝오버2</a>
+
+            </div>
+        </div>
+    </div>
+
+
+   
+</body>
+</html>
